@@ -3,7 +3,9 @@
 ## Current Project State
 
 ### Version Status
-- **Current Version**: 0.7.3 (CRITICAL BUG FIX RELEASE - Handle Resolution Fixed)
+- **Current Version**: 1.1.0 (see CHANGELOG.md; pyproject.toml and manifest.json are canonical and must match)
+- **1.1.0 highlights**: untrusted-output boundary for tool/resource output (`<untrusted-mcp-output>`), region-aware phone parsing via `phonenumbers` (`MAC_MESSAGES_REGION`), case-insensitive email handles. Unreleased: `mac-messages-cli`, agent skill. Clients must still gate `tool_send_message`.
+- **History**: 0.7.3 was the handle-resolution bug fix release; 0.9.x added attachments, chat_id filtering, E.164 recipient normalization; 1.0.0 added security hardening
 - **Development State**: **PRODUCTION READY** - All critical issues resolved, comprehensive fixes implemented
 - **Distribution**: Live on PyPI with full functionality working correctly
 - **Integration**: All MCP tools work correctly + SMS/RCS fallback + handle resolution fixes
@@ -35,7 +37,7 @@
 🚀 Universal Android compatibility: seamless messaging to all platforms
 ```
 
-#### Recent Critical Fix - Handle Resolution Bug (v0.7.3)
+#### Recent Critical Fix - Handle Resolution Bug (v0.7.3, historical)
 ```
 🔧 CRITICAL BUG FIX: find_handle_by_phone() prioritization
 - Fixed issue where group chat handles were selected over direct message handles
@@ -111,19 +113,19 @@
 
 ### Package Quality Assurance - PRODUCTION GRADE
 - ✅ **Integration Testing**: Comprehensive test suite prevents regressions
-- ✅ **Build Process**: Package builds successfully (version 0.7.3)
+- ✅ **Build Process**: Package builds successfully (version 1.1.0)
 - ✅ **Dependency Management**: All dependencies properly imported and used
-- ✅ **Version Management**: Updated to 0.7.3 with comprehensive changelog
+- ✅ **Version Management**: Updated to 1.1.0 with comprehensive changelog
 - ✅ **Bug Tracking**: Critical handle resolution bug identified and fixed
 
 ## Current Release Status
 
-### Version 0.7.3 - CRITICAL BUG FIX RELEASE
+### Version 0.7.3 - CRITICAL BUG FIX RELEASE (historical; current is 1.1.0)
 - ✅ **Handle Resolution Fixed**: Prioritizes direct message handles over group chats
 - ✅ **Contact Filtering Works**: get_recent_messages() with contact parameter now works
 - ✅ **API Enhancement**: Added find_handle_by_phone to public API
 - ✅ **Testing Verified**: Bug fix tested and confirmed working
-- ✅ **CI/CD Deployed**: Tag v0.7.3 pushed, CI/CD pipeline triggered
+- ✅ **CI/CD Deployed**: Tag v0.7.3 pushed (historical), CI/CD pipeline triggered
 
 ### Production Readiness - FULLY READY
 - ✅ **Code Quality**: All critical bugs fixed, comprehensive validation added
@@ -140,7 +142,7 @@
 - **User Impact**: Tool is fully functional for its stated purpose
 - **Trust Restored**: Users get working functionality as promised
 
-### Version 0.7.3 Achievements Summary
+### Version 0.7.3 Achievements Summary (historical)
 1. **Fixed All Catastrophic Failures**: Every major issue from 0.6.6 resolved
 2. **Added Robust Validation**: Prevents crashes and provides helpful errors
 3. **Enhanced User Experience**: Clear error messages and reliable functionality

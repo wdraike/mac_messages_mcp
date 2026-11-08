@@ -12,9 +12,12 @@
 ### Key Dependencies - PRODUCTION READY STATUS ✅
 ```toml
 # Core dependencies
-mcp[cli] = "*"                    # MCP protocol with CLI support - USED
+mcp = "mcp[cli]>=1.2.0,<2.0.0"    # MCP protocol with CLI support - USED
 thefuzz = ">=0.20.0"             # Fuzzy string matching - PROPERLY IMPORTED AND WORKING
 python-Levenshtein = ">=0.23.0"  # Performance boost for fuzzy matching - USED
+phonenumbers = ">=8.13.0"        # E.164 normalization against the Mac's region - USED
+pillow = ">=10.0.0"              # Image handling for tool_get_attachment
+pillow-heif = ">=0.13.0"         # HEIC support
 
 # Development dependencies  
 pytest = ">=7.0.0"               # Testing framework - COMPREHENSIVE COVERAGE
@@ -152,7 +155,7 @@ uvx mac-messages-mcp
 ### Version Management
 - **Semantic Versioning**: MAJOR.MINOR.PATCH pattern
 - **Automated Bumping**: `scripts/bump_version.py` for consistent updates
-- **Git Tags**: Version tags trigger automated PyPI publishing
+- **Publish triggers**: a push to main changing pyproject.toml or manifest.json, a `v*` tag push, or manual workflow_dispatch; when the version tag is missing the workflow creates it and the GitHub release after PyPI succeeds (.github/workflows/publish.yml)
 - **CI/CD Pipeline**: GitHub Actions for build and publish workflow
 - **Quality Assurance**: Comprehensive testing prevents broken releases
 
@@ -190,10 +193,10 @@ ZABCDPHONENUMBER (ZOWNER, ZFULLNUMBER, ZORDERINGINDEX)
 ## Deployment and Distribution
 
 ### PyPI Publishing - PUBLISHES WORKING CODE ✅
-- **Automated Process**: Git tag triggers GitHub Actions workflow
+- **Automated Process**: GitHub Actions publish.yml (triggers above)
 - **Version Synchronization**: Automatic version updates across files
 - **Build Process**: uv build creates distribution packages
-- **Publishing**: uv publish handles PyPI upload
+- **Publishing**: `pypa/gh-action-pypi-publish` with OIDC trusted publishing
 - **Quality Gates**: Comprehensive integration testing prevents broken releases
 
 ### Entry Points
@@ -307,7 +310,10 @@ score_from_thefuzz = fuzz.WRatio(cleaned_search_term, cleaned_candidate_text)
 
 The technical foundation is **excellent** and the project meets **production-grade** quality standards with comprehensive testing, accurate documentation, and reliable functionality.
 
-## Recent Technical Achievements (v0.7.3)
+## Current Version
+- **1.1.0** (pyproject.toml / manifest.json; details in CHANGELOG.md). Adds `phonenumbers` dependency, `MAC_MESSAGES_REGION`, untrusted-output serialization. Sections below describing v0.7.3 are historical.
+
+## Recent Technical Achievements (v0.7.3, historical)
 
 ### Handle Resolution Algorithm - CRITICAL FIX ✅
 - **Problem**: `find_handle_by_phone()` returned first matching handle (often group chats)
