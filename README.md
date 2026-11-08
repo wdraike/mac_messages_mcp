@@ -10,6 +10,7 @@
 [![Downloads](https://static.pepy.tech/badge/mac-messages-mcp)](https://pepy.tech/project/mac-messages-mcp)
 [![macOS](https://img.shields.io/badge/macOS-only-000000?logo=apple&logoColor=white)](#quick-start)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Listed on MCP ServerList](https://mcp-serverlist.com/api/badge/mac-messages-mcp)](https://mcp-serverlist.com/mcp/mac-messages-mcp)
 
 [Quick start](#quick-start) · [Available tools](#available-tools) · [Agent skill](#agent-skill) · [Command-line interface](#command-line-interface) · [Security](SECURITY.md) · [Changelog](CHANGELOG.md)
 
