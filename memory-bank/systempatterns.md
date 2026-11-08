@@ -281,7 +281,7 @@ Evidence of thorough quality assurance:
 
 **Conclusion**: This architecture represents a **complete success story** where initial issues were systematically identified, fixed, and thoroughly tested. The system now provides reliable, production-grade functionality that fully delivers on its promises.
 
-## Recent Architectural Enhancements (v0.7.3)
+## Recent Architectural Enhancements (v0.7.3, historical)
 
 ### Handle Resolution Architecture - CRITICAL FIX ✅
 - **Problem**: Original `find_handle_by_phone()` returned first matching handle, often group chats

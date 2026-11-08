@@ -213,7 +213,7 @@ This is a **complete success story** of project recovery and enhancement:
 
 **Bottom Line**: This project is **production ready** and delivers excellent functionality. All critical issues have been resolved, major enhancements added, and the tool provides reliable, universal messaging integration for AI assistants.
 
-## Recent Achievements (v0.7.3)
+## Recent Achievements (v0.7.3, historical)
 
 ### Critical Handle Resolution Bug Fix ✅
 - **Issue**: `find_handle_by_phone()` was returning group chat handles instead of direct message handles

@@ -214,7 +214,7 @@ The Mac Messages MCP project is now:
 
 The product foundation is **excellent** and successfully delivers on its complete value proposition with comprehensive functionality, reliable operation, and enhanced capabilities that exceed original expectations.
 
-## Recent Product Enhancements (v0.7.3)
+## Recent Product Enhancements (v0.7.3, historical)
 
 ### Critical Handle Resolution Fix ✅
 - **User Problem**: Contact filtering returned "No messages found" despite messages existing

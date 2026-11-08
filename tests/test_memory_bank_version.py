@@ -24,12 +24,16 @@ def test_memory_bank_current_version_matches_pyproject() -> None:
     assert match.group(1) == _project_version()
 
 
-def test_memory_bank_has_no_known_stale_release_strings() -> None:
+def test_memory_bank_has_no_stale_version_lines() -> None:
     version = _project_version()
-    for name in ("activecontext.md", "techcontext.md"):
-        text = (ROOT / "memory-bank" / name).read_text()
-        assert "(version 0.7.3)" not in text, name
-        assert "Updated to 0.7.3" not in text, name
+    for path in sorted((ROOT / "memory-bank").glob("*.md")):
+        for line in path.read_text().splitlines():
+            match = re.match(r"\s*(?:- )?\*?\*?Version\*?\*?: (\d+\.\d+\.\d+)", line)
+            if match:
+                assert match.group(1) == version, f"{path.name}: {line}"
+        text = path.read_text()
+        assert "(version 0.7.3)" not in text, path.name
+        assert "Updated to 0.7.3" not in text, path.name
 
 
 def test_techcontext_has_current_version_section() -> None:
